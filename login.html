@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Login Page for DigiResume</title>
+          <link rel="stylesheet" href="style2.css">
+	  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     </head>
+     <body>
+          <div class="wrapper">
+               <form>
+                    <h1>DIGI RESUME</h1>
+                    <h1>Login</h1>
+                    <div class="input-box">
+                         <input id="username" type="text" placeholder="Username" required>
+			             <i class="bx bxs-user"></i>
+                    </div>
+                    <div class="input-box">
+                              <input id="password" type="password" placeholder="Password" required>
+                              <i class="bx bxs-lock-alt"></i>               
+                    </div>
+
+                    <div class="remember-forgot">
+                         <label><input type="checkbox"> Remember Me</label>
+                         <a href="for.html">Forgot Password</a>
+                    </div>
+
+                    <button type="button" class="btn" onclick="submitForm()">Login</button>
+
+                    <div class="register-link">
+                         <p>Don't have an account? <a href="#">Sign Up</a></p>
+                    </div>
+               </form>
+               
+          </div>
+
+          <script>
+               function submitForm() {
+                    // Retrieve input field values
+                    var username = document.getElementById('username').value;
+                    var password = document.getElementById('password').value;
+
+                    // Perform validation
+                    if (username === '') {
+                         alert('Username cannot be empty');
+
+                    } 
+                    else if(password=='' || password.length<8 ||password[0]!=password[0].toUpperCase()){
+                         alert('check your password')
+                    }
+                    
+
+                    
+                    
+                    else {
+                         // Proceed with other actions like form submission or further validation
+                         console.log('Username:', username);
+                         console.log('Password:', password);
+                         window.location.href = "http://www.w3schools.com";
+                    }
+               }
+          </script>
+     </body>
+</html>
